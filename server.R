@@ -38,7 +38,9 @@ shinyServer(function(input, output, session) {
     df %>%
     ggvis(x=~Component_1,y=~Component_2, fill = ~cluster) %>% 
       layer_points(key:=~carname) %>%
-      add_tooltip(tooltip, "hover")
+      add_tooltip(tooltip, "hover")  %>%
+      add_axis("x", title = 'Component 1') %>%
+      add_axis("y", title = 'Component 2')
   })
   vis %>% bind_shiny('plot1')
 })

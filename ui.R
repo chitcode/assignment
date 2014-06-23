@@ -11,7 +11,7 @@ data(mtcars)
 shinyUI(pageWithSidebar(
   headerPanel('Motor Trend Car Road Tests (mtcars) Data k-means clustering'),
   sidebarPanel(
-    checkboxGroupInput("variable", "Variable:",
+    checkboxGroupInput("variable", "Variable :",
                        c("Miles/(US) gallon" = "mpg",
                          "Cylinders" = "cyl",
                          "Displacement in cu" = "disp",
@@ -20,7 +20,7 @@ shinyUI(pageWithSidebar(
                          "Weight (lb/1000)" = 'wt',
                          "Gears" = "gear"
                          ),c('mpg','cyl','disp','hp','am','wt','gear')),
-    sliderInput("clusters", "Clusters",
+    sliderInput("clusters", "Clusters :",
                 1,9,3,step = 1)),
   mainPanel(
     ggvisOutput('plot1')
