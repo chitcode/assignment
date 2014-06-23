@@ -6,8 +6,8 @@ shinyServer(function(input, output, session) {
   # Combine the selected variables into a new data frame
   selectedData <- reactive({
     
-    validate(need(1 == 2,str(input$variable))
-    )
+    #validate(need(1 == 2,str(input$variable))
+    #)
 
    mtcars[input$variable]
   })
