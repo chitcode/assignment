@@ -1,5 +1,5 @@
+library(shiny)
 library(ggvis)
-data(mtcars)
 
 shinyServer(function(input, output, session) {
   
@@ -33,7 +33,8 @@ shinyServer(function(input, output, session) {
     
     df <- svd_comp()
     df$carname <- rownames(mtcars)
-    df$cluster <- as.factor(clusters()$cluster)    
+    df$cluster <- as.factor(clusters()$cluster) 
+
     
     df %>%
     ggvis(x=~Component_1,y=~Component_2, fill = ~cluster) %>% 

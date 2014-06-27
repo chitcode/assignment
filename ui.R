@@ -29,7 +29,9 @@ shinyUI(pageWithSidebar(
              br(),"5. Finds out the clusters on the fist two principal components using", a("knn algorithm",href="http://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm"),
              br(),"On mouse hover on the points car names displayed.",
              br(),br(),
-             strong("Note:"),"Application works only if more than 2 variables selected")),
+             strong("Note:"),"Application works only if more than 2 variables selected",
+             br(),br(),
+             a(strong("GitHub"),href="https://github.com/chitcode/assignment"))),
   mainPanel(
     ggvisOutput('plot1')
   )
